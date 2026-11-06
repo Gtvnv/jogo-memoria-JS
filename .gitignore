@@ -1,0 +1,12 @@
+# Dependências
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos de editor / SO
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

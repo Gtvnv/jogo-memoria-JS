@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 class="title">🧠 Jogo da Memória</h1>
+            <p class="subtitle">Encontre todos os pares de emojis!</p>
+        </header>
+
+        <section class="stats" aria-live="polite">
+            <div class="stat">
+                <span class="stat-label">Jogadas</span>
+                <span class="stat-value" id="moves">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Pares</span>
+                <span class="stat-value" id="pairs">0 / 8</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Tempo</span>
+                <span class="stat-value" id="timer">00:00</span>
+            </div>
+        </section>
+
+        <div class="board" id="board" aria-label="Tabuleiro do jogo da memória"></div>
+
+        <div class="controls">
+            <button class="btn" id="restart" type="button">🔄 Reiniciar</button>
+        </div>
+    </main>
+
+    <div class="overlay" id="overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="win-title">
+            <h2 id="win-title">🎉 Parabéns!</h2>
+            <p id="win-message">Você encontrou todos os pares!</p>
+            <button class="btn" id="play-again" type="button">Jogar novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
